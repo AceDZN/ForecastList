@@ -17,7 +17,6 @@ export class ForecastList extends Component{
       </tr>
     )
   }
-
   render(){
     return(
       <table className="table table-striped table-hover">
