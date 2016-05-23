@@ -1,5 +1,5 @@
-# ReduxGulpStarterKit
-React, Redux, Gulp Boilerplate
+# ForecastList
+just a redux weather forecast app
 
 ### Checkout
 
