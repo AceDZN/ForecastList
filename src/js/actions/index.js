@@ -8,7 +8,6 @@ export const FETCH_FORECAST = 'FETCH_FORECAST';
 export function fetchForecastFor(city){
   const url = `${FORECAST_URL}&q=${city}`;
   const request = axios.get(url);
-
   return{
     type: FETCH_FORECAST,
     payload: request
