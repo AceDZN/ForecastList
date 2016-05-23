@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchForecastFor} from '../actions/index';
 
-export default class SearchBar extends Component{
+export class SearchBar extends Component{
   constructor(props){
     super(props);
 
@@ -8,7 +11,8 @@ export default class SearchBar extends Component{
       term: ''
     }
 
-    this.handleTermChange = this.handleTermChange.bind(this)
+    this.handleTermChange = this.handleTermChange.bind(this);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
   }
 
   handleTermChange(e){
@@ -18,6 +22,8 @@ export default class SearchBar extends Component{
   }
   handleSearchSubmit(e){
     e.preventDefault();
+    this.props.fetchForecastFor(this.state.term);
+    this.setState({term:''});
   }
 
   render(){
@@ -41,3 +47,9 @@ export default class SearchBar extends Component{
   }
 
 }
+
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({fetchForecastFor},dispatch);
+}
+export default connect(null,mapDispatchToProps)(SearchBar);
