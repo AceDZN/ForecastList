@@ -1,21 +1,17 @@
 {
-  "name": "ReduxGulpStarterKit",
+  "name": "ForecastList",
   "version": "1.0.0",
-  "description": "React, Redux, Gulp Boilerplate",
+  "description": "just a redux weather forecast app",
   "main": "main.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require babel-core/register --reporter dot test/**/*_test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:AceDZN/ReduxGulpStarterKit.git"
+    "url": "git@github.com:AceDZN/ForecastList.git"
   },
   "keywords": [
-    "Boilerplate",
-    "redux",
-    "reactjs",
-    "gulpjs",
-    "scss"
+    "Forecast","weather","react","redux"
   ],
   "author": "Alex Sindalovsky",
   "license": "ISC",
@@ -46,9 +42,11 @@
     "watchify": "*"
   },
   "dependencies": {
+    "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
+    "react-router": "^2.0.1",
     "redux": "^3.0.4"
   }
 }
