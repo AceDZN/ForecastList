@@ -1,20 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-
+import ForecastListItem from '../components/forecast-list-item';
 
 export class ForecastList extends Component{
+
   renderCityForecast(cityData){
+
     return(
-      <tr key={cityData.city.id}>
-        <td>
-          <a href={"https://www.google.com/maps/@"+cityData.city.coord.lat+","+cityData.city.coord.lon+",8.81z"} target="_blank">
-            {cityData.city.name}, {cityData.city.country}
-          </a>
-        </td>
-        <td>Temperature</td>
-        <td>Pressure</td>
-        <td>Humidity</td>
-      </tr>
+      <ForecastListItem key={cityData.city.id} cityData={cityData}/>
     )
   }
   render(){
